@@ -1,0 +1,95 @@
+Grading for Lab 3, Part 2 - Person Class
+Name: Chris Roe
+--------------------------------------------------------
+
+**Style / Program documentation:  2.5 pts out of 3
+
+  Comments and Suggestions:
+    -Take out unnecessary comments before submitting, e.g. // stub
+
+    -In your Person class implementation, the various boolean expressions 
+     that you are using (trying to check preconditions?) are not actually doing 
+     anything.  For example, newName.length()>0 in setFirstName(). For now, 
+     please do not try to check for preconditions within your implementation.
+
+    -When possible, combine nested conditional statements like the following into
+     a single statement:
+
+      if (personA.getFirstName()== personB.getFirstName())
+      {
+         if (personA.getLastName()==personB.getLastName())
+         {
+            if(personA.getAge()==personB.getAge())
+
+     Should be written as follows:
+
+      if (personA.getFirstName()== personB.getFirstName() && 
+         (personA.getLastName()==personB.getLastName() &&
+         if(personA.getAge()==personB.getAge())
+
+
+**Implementation (Person.cpp):      __35__ pts out of 40
+
+  -Errors in less-than (<) operator and equiv/inequiv operator: 
+   see mastertest report below.  Hint: Once you get == tested and working,
+   use == to implement != .  This will save both time and cut down on the
+   likelihood of introducing errors.
+
+   MASTERTEST Report:
+     TEST PASSED: construct a default Person
+     TEST PASSED: construct a Person given first name only
+     TEST PASSED: construct a Person given first name and last name
+     TEST PASSED: construct a Person given first name, last name, and age
+     TEST PASSED: get the full name of a Person
+     TEST PASSED: setting the first name of a Person
+     TEST PASSED: setting the last name of a Person
+     TEST PASSED: setting the age of a Person
+     TEST PASSED: aging a Person one year
+     TEST PASSED: equiv/inequiv: comparing two equivalent Persons
+     TEST PASSED: equiv/inequiv: comparing two Person differing only in age
+     ### TEST FAILED ###: equiv/inequiv: comparing two Person differing only in last name 
+     TEST PASSED: equiv/inequiv: comparing two Person differing only in first name
+     TEST PASSED: less-than operator: p1 == p2
+     ### TEST FAILED ###: less-than operator: p1 < p2 based only on age 
+     TEST PASSED: less-than operator: p1 < p2 based only on first name
+     TEST PASSED: less-than operator: p1 < p2 based only on last name
+     TEST PASSED: less-than operator: p1 < p2 by last name, but with p2.first < p1.first
+     ### TEST FAILED ###: less-than operator: p1 < p2, by last name, but with p2.age < p1.age 
+     TEST PASSED: less-than operator: p1 < p2, by first name, but with p2.age < p1.age
+     TEST PASSED: person addition +
+     
+     Number of tests passed = 18 out of 21
+     Number of tests failed = 3 out of 21
+     Percent of tests passed = 85.7%
+
+
+**Testing (Person_test.cpp):  __4__ pts out of 10
+
+  -Total asserts: 19 (7 given)
+
+  REPORT from Person_test.cpp:
+    Ready to try some tests . . . 
+    basic methods passed
+    getFullName passed
+    agePerson passed
+    lessThan passed
+    equalsUnequals passed
+    addition passed
+    All current tests passing!
+
+  Comments:
+    Tests for less-than operator and equiv/inequiv operators need to be
+    much more extensive. See the mastertest report above for the kinds of 
+    test cases you need to be checking.
+
+    No tests written for setFirstName, setLastName, or setAge.
+
+    Missing tests for constructor with 1 argument and default constructor.
+
+    Also, you need to be including more documentation in your testing
+    program about the specific cases each segmentation of code is testing.
+    This documentation could be either in the form of additional couts
+    (which can double as inline documentation) or comments in your code.
+
+   
+PART 2 TOTAL:  41.5 pts out of 53

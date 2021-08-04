@@ -1,0 +1,92 @@
+Grading for Lab 3, Part 1
+Name: Chris Roe
+--------------------------------------------------------
+
+Lab 3 Part 1 - The Throttle Class:
+
+**Style / Program documentation:     __1.5__ pts out of 2
+    [-0.5 pts] Looks mostly okay, but here are a couple things to work on style-wise:
+      -Clean up unnecessary comments (e.g., leftover from debugging or incorrect 
+       implementations) and excessive blank lines, like toward the top of throttle.cpp.
+      -Write functions that return booleans more succinctly.  For example, is_on can be simplified from this:
+
+     if (position > 0)
+     {
+         return true;
+     }
+     else
+     {
+         return false;
+     }
+
+        to this:
+
+     return (position > 0);
+
+
+**Implementation (throttle.cpp):     __30__ pts out of 40
+
+COMPILER ERROR! [-10]:
+throttle.cpp: In member function ‘bool main_savitch_2A::throttle::is_on() const’:
+throttle.cpp:108:10: error: ‘else’ without a previous ‘if’
+          else
+          ^
+
+    bool throttle::is_on() const
+    {
+         if ((flow() > 0));  <----- this semicolon is the problem
+         {
+            return true;
+         }
+         else
+         {
+            return false;
+         }
+
+    }
+
+    Once compiler error is fixed, all tests pass:
+      TESTING THROTTLE CLASS
+      Testing default constructor . . . PASSED!
+      Testing 1-parameter constructor . . . PASSED!
+      Testing shift() to maximum  . . . PASSED!
+      Testing shut_off() when throttle is on . . . PASSED!
+      Testing shut_off() when throttle is off . . . PASSED!
+      Test shifting up incrementally . . . PASSED!
+      Test shifting down incrementally . . . PASSED!
+      Testing large shift values . . . PASSED!
+      DONE
+
+
+
+**Testing (throttle_test.cpp):       __2__ pts out of 5
+     -Total asserts: 10 (4 given)
+
+   Comments:
+     -Many more tests needed, including a test for the non-default constructor.
+
+PART 1 TOTAL:   33.5 pts out of 47
+
+========================================================
+
+GRADING GUIDELINES (for professors' use -- don't send to students)
+
+   Implementation - 40 points max (Throttle Class or Person Class)
+      40: student code runs perfectly on professor's testing code
+      35: student code fails a few of the professors' tests, but is mostly correct
+      30: student code fails a lot of the professor's tests, but still passes a majority
+      0-29: student code fails a majority of the professor's tests
+
+   Testing for Throttle Class - 5 points max
+   NOTE: grade is related to student's grade for Throttle class implementation
+      0-5: student code runs perfectly on professor's testing code
+      0-3: student code fails a few of the professor's tests, but is mostly correct
+      0-2: student code fails many or a majority of the professor's tests
+
+Final Note:
+-----------
+  If they submit implementation code which fails professor's tests, then either
+     a) they are not writing good testing code, or
+     b) they are not making effective use of their good testing code.
+  Either way, we penalize their testing grade for failures in their implementation
+  code.   
