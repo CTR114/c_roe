@@ -1,0 +1,72 @@
+Lab 5 Part 1: Sequence Class Basics 
+Student: Chris Roe
+
+Student testing code, Sequence_test.part1.cpp: 2 pts out of 5 
+    Total asserts added: 12  (9 asserts were provided for part 1)
+    (note: BW added 21 asserts) 
+    
+    Testing sufficiency / correctness 
+      -Watch out for redundant tests. For example, once you know that the
+       constructor properly creates an empty sequence (asserting that its 
+       size is 0 and that is_item returns false), you don't need to keep 
+       testing this. 
+
+      -Need tests to verify that you can append and fill up a sequence
+       to capacity.
+
+      -Need a test where you advance past the end of the sequence and
+       check that is_item is false.
+
+Sequence.cpp implementation: __30__ pts out of 35
+
+    Report from lab5.part1_mastertest.cpp:
+      ### TEST FAILED ###: is_item() can be false on non-empty sequence
+      TEST PASSED: construct an empty sequence
+      TEST PASSED: append to an empty sequence
+      TEST PASSED: append to a sequence of length 1, current_index was 0
+      TEST PASSED: append to a sequence of length 2, no current item
+      TEST PASSED: append to a sequence of length 3, current_index == 1
+      TEST PASSED: append CAPACITY times in a row
+
+      Number of tests passed = 6 out of 7
+      Percent of tests passed = 85.7143%
+
+    Everything looks good, except for your implementation of is_item.
+
+    is_item:
+      Your implementation of is_item doesn't match the Sequence class
+      invariants. Anytime current_index == length, is_item should
+      return false.  In other words, it's possible for a sequence to
+      contain items (e.g., length = 10), but if current_index is "pointing"
+      to one index past the last item (e.g., current_index = 10), there
+      is no current item.
+
+PART 1 TOTAL: 37 pts out of 45
+
+-----------------------------------------------------------
+
+Lab 5 Part 2: Sequence Class, Advanced Methods 
+Student:
+
+Coding Style / UI / Documentation: _____ pts out of 5 
+
+Student testing code, Sequence_test.cpp: ___ pts out of 15 
+    -Total asserts added: ___  (29 asserts were provided for part 2)
+    (note: BW added 84 asserts) 
+    >>> Be careful not to count "part 1" asserts! <<<
+    -Testing sufficiency / correctness 
+
+Sequence.cpp implementation: _____ pts out of 35
+    - insert
+    - remove_current
+    - operator+
+    - operator+=
+    - operator==
+    - operator!=
+    - operator<<
+    - operator>>
+    - Report from lab5.part2_mastertest.cpp: 
+
+Late Fee (if any):  _____ (-5.5 points per day late)
+
+PART 2 TOTAL: _____ pts out of 55
