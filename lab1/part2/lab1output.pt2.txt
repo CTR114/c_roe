@@ -1,0 +1,96 @@
+*** lab1output.pt2.txt ***
+//Chris roe
+//1/11/17
+
+else_if.cpp (Ch. 4): 
+
+Enter a number: 3
+You entered a positive number
+
+Enter a number: 0
+you entered Zero
+
+Enter a number: -7
+You put in a negative number:
+
+
+password.cpp (Ch. 4):
+
+enter your password:
+man]
+Bad password im sorry you cant enter
+
+enter your password:
+panthers
+Access has been granted well done 
+
+
+ages.cpp (Ch. 4, Practice Prob #1):\
+
+how old is the first person?100
+how old is the second person?: 100
+They are the same age
+
+how old is the first person?45
+how old is the second person?: 50
+user number 2 is older
+
+how old is the first person?101
+how old is the second person?: 101
+Both users are over 100 years old
+
+how old is the first person?33
+how old is the second person?: 22
+user 1 is older 
+
+
+calc.cpp (Ch. 4, Practice Prob. #3):
+
+what is the first number2
+what is the second number3
+what operation would you like to do?*
+The answer is:6
+
+what is the first number3
+what is the second number2
+what operation would you like to do?+
+The answer is:5
+
+what is the first number3
+what is the second number2
+what operation would you like to do?-
+The answer is:1
+
+what is the first number3
+what is the second number2
+what operation would you like to do?/
+The answer is:1.5
+
+username_password.cpp (Ch. 4, Practice Prob. #4):
+
+enter a username:
+roe
+enter your password:
+roe
+Username and password is not correct.This is your last chance, Please enter username again 
+ roe
+enter your password:
+roe
+You are out of guesses im sorry:
+
+
+enter a username:
+chris
+enter your password:
+roe
+You got it right good job!!
+
+enter a username:
+roe
+enter your password:
+chris
+This is your last chance: Enter username 
+ chris
+enter your password:
+roe
+Good job you have entered	 	  	 	  	   	    	  	      	 	

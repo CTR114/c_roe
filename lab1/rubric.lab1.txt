@@ -1,0 +1,170 @@
+Lab 1 Rubric
+Student Name: Chris Roe
+
+Lab 1 Part 1:
+4 points max for style and documentation:  __3__
+   documentation (name and date comment)
+     -FYI: no date given on hello.cpp
+
+   user interface
+     -Need to be more careful on formatting when prompting for user input
+      (and giving output in general).  For example, here are your prompts for
+      calculator.app:
+
+         Enter first argument/number:10
+         Enter second argument.number10
+
+      The format of the two prompts are different (argument/number,
+      argument.number), and there is no separate between the prompt
+      and value entered by the user for the second argument.
+
+      (Think of these kinds of formatting error for a lab as being similar
+       to a paper with typos and mispellings.)
+
+   source code
+      -Be sure to always use consistent indentation to help visually 
+       indicate blocks of code. Mostly, your programs are doing this, 
+       but not calculator.cpp.
+
+3 points max for output listing, lab1output.pt1.txt:  __3__
+   3 points: perfect or almost so
+   2 point: some important defects
+   1 point: file submitted, but major defects
+   0 points:  file not submitted
+
+18 points max for correctness of programs:  __17__
+   hello.cpp
+   friends.cpp
+   readnum.cpp
+   calculator.cpp
+   string_append.cpp
+   add.cpp
+     -Program does not work correctly for floating point numbers
+      (see additional requirements for problem specificed in the Lab 1
+      instructions).
+   divide.cpp
+
+NOTE:  Deductions for program errors
+   -1 for each program that compiles and runs but with some important defects
+   -2 for each program that compiles and runs but is basically incorrect
+   -3 for each program that does not compile / was not created
+   (up to a maximum deduction of 18)
+
+TOTAL out of 25: __23__ pts
+
+==========================================================
+
+Lab 1 Part 2:
+4 points max for style and documentation:  _____
+   documentation (name and date comment)
+   user interface
+   source code
+
+3 points max for output listing, lab1output.pt1.txt:  _____
+   3 points: perfect or almost so
+   2 point: some important defects
+   1 point: file submitted, but major defects
+   0 points:  file not submitted
+
+18 points max for correctness of programs:  _____
+   else_if.cpp
+   password.cpp
+   ages.cpp
+   calc.cpp
+   username_password.cpp
+
+NOTE:  Deductions for program errors
+   -1 for each program that compiles and runs but with some important defects
+   -2 for each program that compiles and runs but is basically incorrect
+   -3 for each program that does not compile / was not created
+   (up to a maximum deduction of 18)
+
+Comments:
+
+TOTAL out of 25: _____ pts
+
+===============================================
+
+Lab 1 Part 3:
+
+4 points max for style and documentation:  _____
+   documentation (name and date comment)
+   user interface
+   source code
+
+3 points max for output listing, lab1output.pt1.txt:  _____
+   3 points: perfect or almost so
+   2 point: some important defects
+   1 point: file submitted, but major defects
+   0 points:  file not submitted
+
+18 points max for correctness of programs:  _____
+   while.cpp
+   for.cpp
+   nested_loops.cpp
+   runsum.cpp
+   password2.cpp
+
+NOTE:  Deductions for program errors
+   -1 for each program that compiles and runs but with some important defects
+   -2 for each program that compiles and runs but is basically incorrect
+   -3 for each program that does not compile / was not created
+   (up to a maximum deduction of 18)
+
+Comments:
+
+TOTAL out of 25: _____ pts
+
+===========================================
+
+Lab 1 Part 4:
+
+4 points max for style and documentation:  __2.5__
+ ✓ documentation (name and date comment)
+
+[-1] user interface - needs help
+
+twilson@Testbox:~/cs223_grading/lab1/roe_chris$ ./add_function 
+the result is :3
+Adding 3 and 4 gives us :7twilson@Testbox:~/cs223_grading/lab1/roe_chris$ ./function_prototype 
+The result is :3
+Adding 3 and 4 gives us:7twilson@Testbox:~/cs223_grading/lab1/roe_chris$ ./global_variable 
+function fun was called3timestwilson@Testbox:~/cs223_grading/lab1/roe_chris$ ./local_variable 
+4twilson@Testbox:~/cs223_grading/lab1/roe_chris$ 
+
+You need to take more care with spacing ("called3times", "us :7") and 
+making sure the prompt is returned to the user on the next line.
+
+[-0.5] source code
+
+   -In calc2.cpp, instead of declaring separate ints j, k, r, and h
+    in each conditional code block, declare one int variable at the
+    top of main and reuse the variable.
+
+   -Also, you need to be using more meaningful variable names than
+    single character-names (a, j, k, etc.)
+
+   -Blank lines to separate function definitions and major blocks of
+    code, but be careful not to get carried away (e.g., password3.cpp).
+
+3 points max for output listing, lab1output.pt1.txt:  __3__
+   3 points: perfect or almost so
+   2 point: some important defects
+   1 point: file submitted, but major defects
+   0 points:  file not submitted
+
+18 points max for correctness of programs:  __18__
+ ✓ add_function.cpp
+ ✓ local_variable.cpp
+ ✓ global_variable.cpp
+ ✓ function_prototype.cpp
+ ✓ calc2.cpp
+ ✓ password3.cpp
+
+NOTE:  Deductions for program errors
+   -1 for each program that compiles and runs but with some important defects
+   -2 for each program that compiles and runs but is basically incorrect
+   -3 for each program that does not compile / was not created
+   (up to a maximum deduction of 18)
+
+TOTAL out of 25: __23.5__ pts

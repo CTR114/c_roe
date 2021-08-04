@@ -1,0 +1,80 @@
+*** lab1output.pt3.txt ***
+
+1. while.cpp (Ch. 5)
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+2. for.cpp (Ch. 5)
+
+0squared is0
+1squared is1
+2squared is4
+3squared is9
+4squared is16
+5squared is25
+6squared is36
+7squared is49
+8squared is64
+9squared is81
+
+
+3. nested_loops.cpp (Ch. 5)
+
+	0	1	2	3	4	5	6	7	8	9
+0	0	0	0	0	0	0	0	0	0	01	0	1	2	3	4	5	6	7	8	92	0	2	4	6	8	10	12	14	16	183	0	3	6	9	12	15	18	21	24	274	0	4	8	12	16	20	24	28	32	365	0	5	10	15	20	25	30	35	40	456	0	6	12	18	24	30	36	42	48	547	0	7	14	21	28	35	42	49	56	638	0	8	16	24	32	40	48	56	64	729	0	9	18	27	36	45	54	63	72	81
+
+
+
+4. runsum.cpp (Ch. 5, Practice Prob. #3)
+   Show the output of doing a running sum of at least 4 numbers.
+
+   Enter the number to multiply: 
+6
+Enter the number to multiply: 
+6
+Enter the number to multiply: 
+6
+Enter the number to multiply: 
+6
+The outcome is: 1296
+
+
+
+
+5. password2.cpp (Ch. 5, Practice Prob. #4)
+   Show the output when a) the first try succeeds, b) the first try fails, but the second succeeds, c) all tries fail.
+
+   enter your password, note you only have 4 tries 
+man
+Bad password im sorry you may not enterenter your password, not you only have 4 tries 
+man
+Bad password im sorry you may not enterenter your password, not you only have 4 tries 
+man
+Bad password im sorry you may not enterenter your password, not you only have 4 tries 
+man
+Bad password im sorry you may not enter
+
+
+enter your password, note you only have 4 tries 
+panthers
+Access has been granted well done
+
+
+
+enter your password, note you only have 4 tries 
+man
+Bad password im sorry you may not enter 
+enter your password, note you only have 4 tries 
+panthers
+Access has been granted well done
+	 	  	 	  	   	    	  	      	 	
