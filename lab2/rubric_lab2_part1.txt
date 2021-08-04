@@ -1,0 +1,26 @@
+Lab 2 Part 1:
+Student Name:
+
+10 points for GDB questions: _____
+
+10 points for count_five errors: _____
+
+6 points max for style and documentation:  _____
+   documentation (name and date comment)
+   user interface
+   source code
+
+24 points max for correctness of programs:  _____
+   multidimensional_array.cpp
+   sum_array.cpp
+   count_fives_correct.cpp
+
+NOTE:  Deductions for program errors
+   -2 for each program that compiles and runs but with some important defects
+   -4 for each program that compiles and runs but is basically incorrect
+   -6 for each program that does not compile 
+   -8 for each program that was not submitted
+
+Comments:
+
+TOTAL out of 50: _____ pts

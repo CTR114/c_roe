@@ -1,0 +1,72 @@
+lab2output.pt2.txt: Output listings for Lab 2, Part 2
+Name: Chris Roe
+Date: 1/21/17
+
+1. get_line.cpp (Ch.19)
+   Show the result of entering a line of text which contains whitespace.
+
+   Please enter a line of text: 
+you typed in the line
+
+
+
+second example in case:\
+Please enter a line of text:Roe   
+you typed in the line
+Roe  
+
+
+
+2. search.cpp (Ch.19)
+   Show the result of three different executions of this program, using an
+   input string... (a) with 0 cat appearances; (b) with exactly 1 cat appearance;
+   (c) equal to, "I'm a catatonic cat lover and muscat wine maker from
+   Piscataway, NJ."
+
+   a)   please enter a line of text: hey there man
+The word cat appears: 
+0times in the stringhey there man
+
+
+b)    please enter a line of text: hey man there is a cat
+The word cat appears: 
+1times in the stringhey man there is a cat
+
+c)   The word cat appears: 
+  4times in the string''im a catatonic cat lover and muscat wine maker from piscataway,NJ.'
+
+
+3. stringThing.cpp (supplementary problem)
+   Show three runs of the program.  Mix up your inputs to test your code on a variety
+   of inputs.  Each of the three runs should result in a different result for the
+   substring report: (a) neither is a substring of the other; (b) second is a substring
+   of the first, but not conversely; (c) the strings are equal.
+
+
+please enter a line of text: this is not a substring what what     
+please enter a line of text: hey
+Neither are substrings
+
+
+
+please enter a line of text:        
+please enter a line of text: I wonder if this will say it is a substring
+Neither are substrings
+
+
+please enter a line of text: this is a substring
+please enter a line of text: this is a sub
+Str1 is a substring of str2
+
+
+please enter a line of text: are these =
+please enter a line of text: are these =
+Str1 is a substring of str2
+The strings are the same
+
+
+
+
+
+
+	 	  	 	  	   	    	  	      	 	

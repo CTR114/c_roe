@@ -1,0 +1,472 @@
+Processing: roe_chris
+lab2part1.txt
+  -compiling multidimensional_array.cpp
+  -compiling sum_array.cpp
+  -compiling count_fives_correct.cpp
+lab2output.pt2.txt
+  -compiling getline.cpp
+  -compiling search.cpp
+search.cpp: In function ‘int main()’:
+search.cpp:19:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   i != string::npos;
+                ^
+  -compiling stringThing.cpp
+stringThing.cpp:10:57: error: ISO C++ forbids declaration of ‘str2’ with no type [-fpermissive]
+ void Min (const string& str, const string& str1, const& str2)
+                                                         ^
+stringThing.cpp: In function ‘void Min(const string&, const string&, const int&)’:
+stringThing.cpp:12:22: error: no match for ‘operator<=’ (operand types are ‘const string {aka const std::basic_string<char>}’ and ‘const int’)
+  if (str<=str1 && str<= str2)
+                      ^
+stringThing.cpp:12:22: note: candidates are:
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_pair.h:239:5: note: template<class _T1, class _T2> bool std::operator<=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator<=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_pair.h:239:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:12:25: note:   ‘const string {aka const std::basic_string<char>}’ is not derived from ‘const std::pair<_T1, _T2>’
+  if (str<=str1 && str<= str2)
+                         ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:315:5: note: template<class _Iterator> bool std::operator<=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator<=(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:315:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:12:25: note:   ‘const string {aka const std::basic_string<char>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  if (str<=str1 && str<= str2)
+                         ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:365:5: note: template<class _IteratorL, class _IteratorR> bool std::operator<=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator<=(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:365:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:12:25: note:   ‘const string {aka const std::basic_string<char>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  if (str<=str1 && str<= str2)
+                         ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/basic_string.h:2643:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2643:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:12:25: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘const int’
+  if (str<=str1 && str<= str2)
+                         ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/basic_string.h:2655:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2655:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:12:25: note:   mismatched types ‘const _CharT*’ and ‘int’
+  if (str<=str1 && str<= str2)
+                         ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/basic_string.h:2667:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<=(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2667:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:12:25: note:   mismatched types ‘const _CharT*’ and ‘std::basic_string<char>’
+  if (str<=str1 && str<= str2)
+                         ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:860:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator<=(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator<=(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:860:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:12:25: note:   ‘const string {aka const std::basic_string<char>}’ is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+  if (str<=str1 && str<= str2)
+                         ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:854:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator<=(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator<=(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:854:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:12:25: note:   ‘const string {aka const std::basic_string<char>}’ is not derived from ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’
+  if (str<=str1 && str<= str2)
+                         ^
+stringThing.cpp:16:28: error: no match for ‘operator<=’ (operand types are ‘const string {aka const std::basic_string<char>}’ and ‘const int’)
+  else if (str1<=str && str1<=str2)
+                            ^
+stringThing.cpp:16:28: note: candidates are:
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_pair.h:239:5: note: template<class _T1, class _T2> bool std::operator<=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator<=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_pair.h:239:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:16:30: note:   ‘const string {aka const std::basic_string<char>}’ is not derived from ‘const std::pair<_T1, _T2>’
+  else if (str1<=str && str1<=str2)
+                              ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:315:5: note: template<class _Iterator> bool std::operator<=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator<=(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:315:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:16:30: note:   ‘const string {aka const std::basic_string<char>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  else if (str1<=str && str1<=str2)
+                              ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:365:5: note: template<class _IteratorL, class _IteratorR> bool std::operator<=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator<=(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:365:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:16:30: note:   ‘const string {aka const std::basic_string<char>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  else if (str1<=str && str1<=str2)
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/basic_string.h:2643:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2643:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:16:30: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘const int’
+  else if (str1<=str && str1<=str2)
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/basic_string.h:2655:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2655:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:16:30: note:   mismatched types ‘const _CharT*’ and ‘int’
+  else if (str1<=str && str1<=str2)
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/basic_string.h:2667:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<=(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2667:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:16:30: note:   mismatched types ‘const _CharT*’ and ‘std::basic_string<char>’
+  else if (str1<=str && str1<=str2)
+                              ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:860:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator<=(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator<=(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:860:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:16:30: note:   ‘const string {aka const std::basic_string<char>}’ is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+  else if (str1<=str && str1<=str2)
+                              ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:854:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator<=(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator<=(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:854:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:16:30: note:   ‘const string {aka const std::basic_string<char>}’ is not derived from ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’
+  else if (str1<=str && str1<=str2)
+                              ^
+stringThing.cpp:20:15: error: no match for ‘operator<=’ (operand types are ‘const int’ and ‘const string {aka const std::basic_string<char>}’)
+  else if (str2<=str && str2<=str1)
+               ^
+stringThing.cpp:20:15: note: candidates are:
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_pair.h:239:5: note: template<class _T1, class _T2> bool std::operator<=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator<=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_pair.h:239:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:17: note:   mismatched types ‘const std::pair<_T1, _T2>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                 ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:315:5: note: template<class _Iterator> bool std::operator<=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator<=(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:315:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:17: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                 ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:365:5: note: template<class _IteratorL, class _IteratorR> bool std::operator<=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator<=(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:365:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:17: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                 ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/basic_string.h:2643:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2643:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:17: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                 ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/basic_string.h:2655:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2655:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:17: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                 ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/basic_string.h:2667:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<=(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2667:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:17: note:   mismatched types ‘const _CharT*’ and ‘int’
+  else if (str2<=str && str2<=str1)
+                 ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:860:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator<=(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator<=(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:860:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:17: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                 ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:854:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator<=(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator<=(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:854:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:17: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                 ^
+stringThing.cpp:20:28: error: no match for ‘operator<=’ (operand types are ‘const int’ and ‘const string {aka const std::basic_string<char>}’)
+  else if (str2<=str && str2<=str1)
+                            ^
+stringThing.cpp:20:28: note: candidates are:
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_pair.h:239:5: note: template<class _T1, class _T2> bool std::operator<=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator<=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/4.8/bits/stl_pair.h:239:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:30: note:   mismatched types ‘const std::pair<_T1, _T2>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                              ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:315:5: note: template<class _Iterator> bool std::operator<=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator<=(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:315:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:30: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                              ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:365:5: note: template<class _IteratorL, class _IteratorR> bool std::operator<=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator<=(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:365:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:30: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/basic_string.h:2643:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2643:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:30: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/basic_string.h:2655:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2655:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:30: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                              ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /usr/include/c++/4.8/bits/locale_classes.h:40,
+                 from /usr/include/c++/4.8/bits/ios_base.h:41,
+                 from /usr/include/c++/4.8/ios:42,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/basic_string.h:2667:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<=(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2667:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:30: note:   mismatched types ‘const _CharT*’ and ‘int’
+  else if (str2<=str && str2<=str1)
+                              ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:860:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator<=(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator<=(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:860:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:30: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                              ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_iterator.h:854:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator<=(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator<=(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:854:5: note:   template argument deduction/substitution failed:
+stringThing.cpp:20:30: note:   mismatched types ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’ and ‘const int’
+  else if (str2<=str && str2<=str1)
+                              ^
+In file included from /usr/include/c++/4.8/bits/char_traits.h:39:0,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from stringThing.cpp:6:
+/usr/include/c++/4.8/bits/stl_algobase.h: In instantiation of ‘const _Tp& std::min(const _Tp&, const _Tp&, _Compare) [with _Tp = std::basic_string<char>; _Compare = std::basic_string<char>]’:
+stringThing.cpp:112:19:   required from here
+/usr/include/c++/4.8/bits/stl_algobase.h:242:26: error: no match for call to ‘(std::basic_string<char>) (const std::basic_string<char>&, const std::basic_string<char>&)’
+       if (__comp(__b, __a))
+                          ^
+

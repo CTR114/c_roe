@@ -1,0 +1,22 @@
+Student Name:
+
+Lab2 Part 2:
+
+5 points max for user interface and documentation:  _____
+   name and date comments
+   user interface
+
+15 points max for coding style and clarity
+   formatting (indenting, spacing)
+   variable names
+   function names
+   functional decomposition (helper functions)
+
+30 points max for correctness of stringThing:  _____
+   part A: min of three
+   part B: min length, max length, average length
+   part C: substrings
+
+Comments:
+
+TOTAL out of 50: _____ pts
