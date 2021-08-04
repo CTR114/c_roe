@@ -1,0 +1,186 @@
+// FILE: stack.template
+// Lab 7 Part 2
+//
+//  Name: Chris Roe
+//  Date: March 20th
+//
+// IMPLEMENTS: The stack template class using the linked-list toolkit
+//      (provided in node2.h).
+//
+// INVARIANTS
+//   1. The items in the stack are stored in a linked list, with the
+//      top of the stack stored at the head node, down to the bottom
+//      of the stack at the tail node.
+//
+//   2. The member variable `top_ptr` is the head pointer of the
+//      linked list of items.
+//
+//   3. If the stack is empty, `top_ptr` is NULL.
+//
+
+#include <string>
+#include <iostream>
+#include <stdexcept>  // provides standard exceptions -- see p.810 of textbook
+#include "node2.h"
+
+namespace main_savitch_7B
+{
+// Implement your functions here
+
+    // CONSTRUCTOR for the stack<Item> template class:
+
+    // stack
+    // Postcondition: The stack has been initialized as an empty stack.
+    template <class Item>
+    stack<Item>::stack()
+    {
+    	top_ptr = 0;
+    }	 	  	 	  	   	    	  	      	 	
+
+    // DESTRUCTOR for the stack<Item> template class:
+    template <class Item>
+    stack<Item>::~stack()
+    {
+    	list_clear(top_ptr);
+    }
+
+    // CONSTANT MEMBER FUNCTIONS for the stack<Item> class:
+
+    // empty
+    // Postcondition: Return value is true iff the stack is empty.
+    template <class Item>
+    bool stack<Item>::empty() const
+    {
+    	return list_empty(top_ptr);
+    }
+
+    // top
+    // Precondition: size() > 0.
+    // Postcondition: The return value is (a copy of) the top item of the stack.
+    //   The stack is unchanged. This version differs slightly from the 
+    //   STL stack, where the top function returns a _reference_ to the item 
+    //   on top of the stack.
+    // NOTE: throws domain_error exception if stack is empty
+    template <class Item>
+    Item stack<Item>::top() const
+    {
+    	if (empty())
+    	{
+    		throw std:: domain_error ("Stack is empty cant print");
+    	}
+    	return top_ptr -> data();
+    }
+
+    // size
+    // Postcondition: Return value is the total number of items in the stack.
+    template <class Item>
+    typename stack<Item>::size_type stack<Item>::size() const
+    {	 	  	 	  	   	    	  	      	 	
+    	return list_length(top_ptr);
+    }
+
+    // MODIFICATION MEMBER FUNCTIONS for the stack<Item> class:
+
+    // push
+    // Postcondition: A new copy of entry has been pushed onto the stack.
+    template <class Item>
+    void stack<Item>::push(const Item& val)
+    {
+    	top_ptr = list_head_insert(top_ptr, val);
+    }
+
+    // pop
+    // Precondition: size() > 0.
+    // Postcondition: The top item of the stack has been removed.
+    // NOTE: throws domain_error exception if stack is empty
+    template <class Item>
+    void stack<Item>::pop()
+    {
+    	top_ptr = list_head_remove(top_ptr);
+    }
+
+    // reverse
+    // Postcondition: The order of the items in the stack has been reversed.
+    // Example:  if the stack was top<d, c, b, a>, after the call to
+    // reverse() returns, the queue will be top<a, b, c, d>
+    template <class Item>
+    void stack<Item>::reverse()
+    {
+    	stack<Item> temp;
+    	while (!(empty()))
+    	{
+    		temp.push(top_ptr -> data());
+    		pop();
+    	}	 	  	 	  	   	    	  	      	 	
+    	top_ptr = list_copy(temp.top_ptr);
+    	
+    }
+
+    // COPY CONSTRUCTOR
+    template <class Item>
+    stack<Item>::stack(const stack &source)
+    {
+    	top_ptr = 0;
+    	// check for self-assignment
+		if (this == &source) { return; }
+		top_ptr = list_copy(source.top_ptr);
+
+    }
+
+    // ASSIGNMENT OPERATOR
+    template <class Item>
+    void stack<Item>::operator=(const stack &source)
+    {
+    	if ( this == &source) { return; }
+    	list_clear(top_ptr);
+    	top_ptr = list_copy(source.top_ptr);
+
+    }
+
+    // FRIEND FUNCTIONS
+    template <class Item>
+    bool operator==(const stack<Item>& stack1, const stack<Item>& stack2)
+    {
+    	if (stack1.size() == stack2.size())
+    	{
+    		for ( int i = 0; i < stack1.size(); i++)
+    		{
+    			if(stack1.top() != stack2.top())
+    			{
+    				return false;
+    			}	 	  	 	  	   	    	  	      	 	
+    			if (stack1.top() == stack2.top())
+    			{
+    				stack1.top_ptr -> link();
+    				stack2.top_ptr -> link();
+    			}
+    		}
+    		return true;
+    	}
+    	return false;
+    }
+
+    template <class Item>
+    bool operator!= (const stack<Item>& stack1, const stack<Item>& stack2)
+    {
+    	return !operator==(stack1,stack2);
+    }
+ 
+
+
+template <class Item>
+std::ostream& operator<<(std::ostream & out, const main_savitch_7B::stack<Item> & stk)
+{
+   	main_savitch_6B::node<Item>* curr_ptr = stk.top_ptr;
+    out << "Stack of size " << stk.size() << ":\n";
+    while (curr_ptr != NULL)
+    {
+     	out << (curr_ptr -> data()) << "\n";
+       	curr_ptr = curr_ptr -> link();
+    }
+    return out;
+}
+
+
+} // end main_savitch_7B
+	 	  	 	  	   	    	  	      	 	

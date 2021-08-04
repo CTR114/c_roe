@@ -1,0 +1,137 @@
+// FILE: toolkit.template
+// Lab 7 Part 2
+//
+//  Name: Theresa Wilson
+//  Date: 3/11/16
+//  Revised 3-12-17 by Barb Wahl
+//
+// ****************** DO NOT CHANGE THIS FILE ************************
+//
+// IMPLEMENTS: The functions of the linked list toolkit
+//       (see node2.h for documentation).
+//
+// NOTE: Since node is a template class, this file is included in node2.h.
+//       Therefore, we should not put any using directives in this file.
+//
+// INVARIANT for the node class:
+//    The data of a node is stored in data_field, and the link is stored
+//    in link_field.
+//
+
+#include <iostream>
+#include <string>
+#include <cassert>
+#include <cstdlib>
+
+namespace main_savitch_6B
+{
+// list_empty
+// Precondition: head_ptr is the head pointer of a linked list.
+// Postcondition: Returns true if linked list is empty; otherwise, returns false.
+template <class Item>
+bool list_empty(const node<Item>* head_ptr)
+{
+    return head_ptr == NULL;
+}
+
+// list_length
+// Precondition: head_ptr is the head pointer of a linked list.
+// Postcondition: The value returned is the number of nodes in the linked list.
+template <class Item>
+std::size_t list_length(const node<Item>* head_ptr)
+{
+    std::size_t count = 0;
+    const node<Item>* curr = head_ptr;
+    while (curr != NULL)
+    {
+        ++count;
+        curr = curr -> link();
+    }
+    return count;
+}
+
+// list_head_insert
+// Precondition: head_ptr is the head pointer of a linked list.
+// Postcondition: A new node containing the given entry has been added at
+//    the head of the linked list; head_ptr now points to the head of the
+//    new, longer linked list.
+template <class Item>
+node<Item>* list_head_insert(node<Item>* head_ptr, const Item& entry)
+{
+    // Create a new node containing entry
+    node<Item>* temp_ptr = new node<Item>(entry);
+
+    // Set new node to point to the current head
+    temp_ptr -> set_link(head_ptr);
+
+    // Update head_ptr
+    head_ptr = temp_ptr;
+
+    return head_ptr;
+}
+
+// list_insert
+// Precondition: previous_ptr points to a node in a linked list.
+// Postcondition: A new node containing the given entry has been added AFTER
+//    the node that previous_ptr points to.
+template <class Item>
+void list_insert(node<Item>* previous_ptr, const Item& entry)
+{
+    node<Item> *insert_ptr = new node<Item>(entry, previous_ptr -> link());
+    previous_ptr -> set_link(insert_ptr);
+}
+
+// list_head_remove
+// Precondition: head_ptr is the head pointer of a linked list,
+//    with at least one node.
+// Postcondition: The head node has been removed and returned to the heap;
+//    head_ptr is now the head pointer of the new, shorter linked list.
+template <class Item>
+node<Item>* list_head_remove(node<Item>* head_ptr)
+{
+    node<Item>* temp = head_ptr;
+    head_ptr = head_ptr -> link();
+    delete temp;
+    return head_ptr;
+}
+
+// clear
+// Precondition: head_ptr is the head pointer of a linked list.
+// Postcondition: All nodes of the list have been returned to the heap,
+template <class Item>
+void list_clear(node<Item>*& head_ptr)    // NOLINT We're allowing this. TW/BW
+{
+    while (head_ptr != NULL)
+    {
+        head_ptr = list_head_remove(head_ptr);
+    }
+}
+
+// copy
+// Precondition:  source_ptr is the head pointer of a linked list.
+// Postcondition:  head_ptr and tail_ptr are the head and tail pointers
+//    for a new list that contains the same items as the list pointed to 
+//    by source_ptr
+template <class Item>
+node<Item>* list_copy(node<Item>* source_ptr)
+{
+    node<Item>* head_ptr = NULL;
+    node<Item>* prev_ptr = NULL;
+    if (source_ptr == NULL) { return head_ptr; }
+
+    head_ptr = list_head_insert(head_ptr, source_ptr -> data());  // copy head node's data
+    source_ptr = source_ptr -> link();  // advance to next node
+
+    // copy rest of data...
+    prev_ptr = head_ptr;
+    while (source_ptr != NULL)
+    {
+        list_insert(prev_ptr, source_ptr -> data());
+        prev_ptr = prev_ptr -> link();
+        source_ptr = source_ptr -> link();
+    }
+
+    return head_ptr;
+}
+
+}  // end namespace main_savitch_6B

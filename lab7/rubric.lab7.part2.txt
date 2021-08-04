@@ -1,0 +1,41 @@
+Lab 7 Part 2: Linked-list Stack Template
+Due Monday 3-20-17
+Student: Chris Roe
+
+TESTING (stack_test.cpp): 20 pts out of 30
+
+   - Good job testing the stack using different types of data,
+     but you're missing a lot of important tests, e.g., when the stack is
+     empty or only contains one thing, testing self-assignment, etc.
+   - Tests for exception handling not implemented.
+
+
+IMPLEMENTATION (stack.template): 17 pts out of 20
+
+  pop
+    Does not check for an empty stack before popping.
+
+  equiv/inequiv
+    It looks like you are trying to advance a cursor-type pointer to a node
+    when you loop through equivalent-sized stacks to compare individual items.
+    Except, you never create a cursor node pointer, and so it never gets
+    advanced inside the loop.
+
+  Mastertest Report:
+    Number of segmentation faults encountered during testing = 1
+    Number of tests passed = 33 out of 35
+    Number of tests failed = 2 out of 35
+    Percent of tests passed = 94.2857%
+
+    Testing equivalence, inequivalence . . .
+      equneq.test.5: ### TEST FAILED ###: same size, diff first value
+
+    Testing that exceptions are thrown when necessary . . .
+      ### TEST FAILED ###: pop and empty stack; segmentation fault
+
+  Valgrind Report (avoid memory leaks!):
+    All heap blocks were freed -- no leaks are possible
+
+
+Part 2 TOTAL: 37 out of 50
+

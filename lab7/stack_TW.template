@@ -1,0 +1,189 @@
+// FILE: stack.template
+// Lab 7 Part 2
+//
+//  Name: Theresa Wilson
+//  Date: Wilson
+//
+// IMPLEMENTS: The stack template class using the linked-list toolkit
+//      (provided in node2.h).
+//
+// INVARIANTS
+//   1. The items in the stack are stored in a linked list, with the
+//      top of the stack stored at the head node, down to the bottom
+//      of the stack at the tail node.
+//
+//   2. The member variable `top_ptr` is the head pointer of the
+//      linked list of items.
+//
+//   3. If the stack is empty, `top_ptr` is NULL.
+//
+
+#include <string>
+#include <iostream>
+#include <stdexcept>  // provides standard exceptions -- see p.810 of textbook
+#include "node2.h"
+
+namespace main_savitch_7B
+{
+    // CONSTRUCTOR
+    template <class Item>
+    stack<Item>::stack()
+    {
+        top_ptr = NULL;
+    }
+
+    // DESTRUCTOR
+    template <class Item>
+    stack<Item>::~stack()
+    {
+        list_clear(top_ptr);
+        top_ptr = NULL;
+    }
+
+    // CONSTANT MEMBER FUNCTIONS
+    template <class Item>
+    bool stack<Item>::empty() const
+    {
+        return top_ptr == NULL;
+    }
+
+    template <class Item>
+    Item stack<Item>::top() const
+    {
+        if (empty()) { throw std::domain_error("Warning: Stack is empty!"); }
+        return top_ptr -> data();       
+    }
+
+    template <class Item>
+    typename stack<Item>::size_type stack<Item>::size() const
+    {
+        return list_length(top_ptr);
+    }
+
+    // MODIFICATION MEMBER FUNCTIONS
+    template <class Item>
+    void stack<Item>::push(const Item& val)
+    {
+        top_ptr = list_head_insert(top_ptr, val);
+    }
+
+    template <class Item>
+    void stack<Item>::pop()
+    {
+        if (empty()) { throw std::domain_error("Warning: Stack is empty!"); }
+        top_ptr = list_head_remove(top_ptr);
+    }
+
+    template <class Item>
+    void stack<Item>::reverse()
+    {
+        if (!empty())
+        {
+            // Use a temporary list to hold the items in the stack;
+            // insert into the list at the tail to maintain the same
+            // order that items are in the stack from top to bottom.
+
+            main_savitch_6B::node<Item>* temp_list = NULL;
+            temp_list = list_head_insert(temp_list, top());
+            pop();
+
+            main_savitch_6B::node<Item>* curr = temp_list;
+            while (!empty())
+            {
+                list_insert(curr, top());
+                pop();
+                curr = curr -> link();
+            }
+            while (!list_empty(temp_list))
+            {
+                push(temp_list -> data());
+                temp_list = list_head_remove(temp_list);
+            }
+        }
+    }
+
+    // COPY CONSTRUCTOR
+    template <class Item>
+    stack<Item>::stack(const stack<Item> &source)
+    {
+        top_ptr = list_copy(source.top_ptr);
+    }
+
+    // ASSIGNMENT OPERATOR
+    template <class Item>
+    void stack<Item>::operator=(const stack<Item> &source)
+    {
+        if (this != &source)
+        {
+            list_clear(top_ptr);
+            top_ptr = list_copy(source.top_ptr);
+        }
+    }
+
+    // equivalence operator
+    // Postcondition: Returns true iff stack1 and stack2 contain the same values 
+    //    in the same order from top to bottom.
+    template <class Item>
+    bool operator== (const stack<Item> & stack1, const stack<Item> & stack2)
+    {
+        main_savitch_6B::node<Item>* s1ptr = stack1.top_ptr;
+        main_savitch_6B::node<Item>* s2ptr = stack2.top_ptr;
+        while (s1ptr != NULL && s2ptr != NULL)
+        {
+            if (s1ptr -> data() != s2ptr -> data())
+            {
+                return false;
+            }
+            s1ptr = s1ptr -> link();
+            s2ptr = s2ptr -> link();
+        }
+        if (s1ptr == NULL && s2ptr == NULL)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    // inequivalence operator
+    // Postcondition: Returns true iff stack1 == stack2 is false.
+    template <class Item>
+    bool operator!= (const stack<Item> & stack1, const stack<Item> & stack2)
+    {
+        return !(stack1 == stack2);
+    }
+
+    // PROVIDED FUNCTION
+    // output stream operator
+    //
+    // Printed out Stack should have this general format:
+    //
+    // Stack of size <num>:
+    // top_item
+    //    .
+    //    .
+    //    .
+    // bottom_item
+    //
+    // For example, suppose the stack contains 3 strings: "Billy Bob,
+    // Cathy Sue, and Earl Grey, with Billy Bob on the top and Earl Grey
+    // on the bottom.  When the stack is printed, it should look as follows:
+    //
+    // Stack of size 3:
+    // Billy Bob
+    // Cathy Sue
+    // Earl Grey
+    //
+    template <class Item>
+    std::ostream& operator<<(std::ostream & out, const stack<Item> & stk)
+    {
+    	main_savitch_6B::node<Item>* curr_ptr = stk.top_ptr;
+        out << "Stack of size " << stk.size() << ":\n";
+        while (curr_ptr != NULL)
+        {
+        	out << (curr_ptr -> data()) << "\n";
+        	curr_ptr = curr_ptr -> link();
+        }
+
+       return out;
+    }
+} // end main_savitch_7B

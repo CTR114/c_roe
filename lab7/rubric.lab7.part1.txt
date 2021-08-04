@@ -1,0 +1,62 @@
+Lab 7 Part 1: Circular-array Queue
+Due Thursday 3-16-17
+Student: Chris Roe
+
+Testing (queue_test.cpp): 14 pts out of 25
+
+  Fomatting and documentation:
+     - Testing was decomposed into individual functions, but otherwise
+       no in-program comments or descriptive output was used to document
+       the individual tests. [-4 pts]
+
+  Missing Tests:
+   test_equiv_inequiv
+     - queues are same size, same values except for last item in each queues; returns false
+     - queues are equivalent, but with different values for front index; returns true
+     - queues are equivalent, but at least one queue wraps around from back to front
+          (tests circular-nature of array)
+
+   test_reverse: 
+     - empty queue
+     - works when front of queue is not at index 0
+     - works when queue wraps around from back to front (tests circular-nature)
+
+   test_automatic_assignment_operator (tests default implementation given by compiler):
+     - assign an empty queue
+     - assign shorter queue to longer queue
+     - works for self-assignment
+     - object independence after assignment
+
+  Additional Feedback:
+    - Just checking the front of the queue is not sufficient to test that
+      reverse worked without error.
+
+Implementation (queue.cpp): 21 pts out of 25
+
+  reverse
+    -Right idea for reversing the queue in-place, but remember the items
+     in the queue could start at any index, and perhaps wrap arouond from
+     the end of the array to the beginning.  This makes getting the indexes
+     correct for the in-pace swap a bit trickier.
+
+  equivalence/inequivalence:
+    -Incorrectly returns false when comparing two queues with the same items but
+     different values for instance variables first & last
+
+  Mastertest Report:
+    Number of tests passed = 48 out of 54
+    Number of tests failed = 6 out of 54
+    Percent of tests passed = 88.8889%
+
+    Testing equivalence, inequivalence . . .
+      equneq.test.3: ### TEST FAILED ###: same size, same values, same order
+
+    Testing reverse . . .
+      reverse.test.3: ### TEST FAILED ###: queue of size 2
+      reverse.test.4: ### TEST FAILED ###: queue of size 3
+      reverse.test.5: ### TEST FAILED ###: full queue
+      reverse.test.6: ### TEST FAILED ###: with first=28 and last=5
+      reverse.test.7: ### TEST FAILED ###: with first=25 and last=2
+
+Part 1 TOTAL: 35 out of 50
+
