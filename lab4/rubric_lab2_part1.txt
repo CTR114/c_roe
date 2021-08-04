@@ -1,0 +1,74 @@
+Lab 4 Part 1 - tictactoe.cpp
+Chris Roe
+
+Style / User Interface / Documentation:  _4_ of 7
+   Always put a space on both sides of every binary operator symbol.
+      Not like this: for (int j = 0; j<cols; j++)
+                     {
+                        cout<< " Enter the number you want to use for,"<< " " << i << ", "<< j << "\n";
+                        cin>> p_p_tictactoe[i][j];
+                        cout<<"\n";
+                     }
+      But like this: for (int j = 0; j < cols; j++)
+                     {
+                        cout << " Enter the number you want to use for,"<< " " << i << ", "<< j << "\n";
+                        cin >> p_p_tictactoe[i][j];
+                        cout <<"\n";
+                     }
+
+   UI Errors:
+      In Step 5, don't ask for a "number", ask for a "character."
+      In Step 6, print a space after each character.
+
+
+Correctness of Implementation:  _12_ of 18
+
+   Crucial error in step 4:  For loop needs to end when i == rows - 1, not when i == cols - 1
+
+   Memory leak when #cols > #rows:
+      ==26685== HEAP SUMMARY:
+      ==26685==     in use at exit: 4 bytes in 1 blocks
+      ==26685==   total heap usage: 5 allocs, 4 frees, 40 bytes allocated
+      ==26685==
+      ==26685== 4 bytes in 1 blocks are definitely lost in loss record 1 of 1
+      ==26685==    at 0x4C2B800: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+      ==26685==    by 0x400B5D: main (tictactoe.cpp:39)
+      ==26685==
+      ==26685== LEAK SUMMARY:
+      ==26685==    definitely lost: 4 bytes in 1 blocks
+
+   Seg fault when #cols < #rows:
+      wahl@Potter:~/cs223_win2017/cs223_grading_group/lab4/roe_chris$ g++ tictactoe.cpp
+      wahl@Potter:~/cs223_win2017/cs223_grading_group/lab4/roe_chris$ ./a.out
+      Enter how many rows you would like:
+      3
+      Enter the number of columns you would like
+      2
+       Enter the number you want to use for, 0, 0
+      q
+
+       Enter the number you want to use for, 0, 1
+      w
+
+       Enter the number you want to use for, 1, 0
+      e
+
+       Enter the number you want to use for, 1, 1
+      r
+
+       Enter the number you want to use for, 2, 0
+      t
+      Segmentation fault
+
+   TIP:  You should have tested #rows < #cols, and #rows > #cols.  Your program only works
+   when #rows == #cols.
+
+Total for tictactoe.cpp:   _16_ pts out of 25
+
+Program should:
+   -ask for number of rows then number of columns
+   -create 2-D array of chars in dynamic memory of size rows x cols
+   -ask for chars one position at a time and populate 2-D array
+   -print out 2-D array in a grid
+   -free allocated memory using delete
+

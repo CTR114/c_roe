@@ -1,0 +1,96 @@
+Lab 4 Part 2 - The Pixel and Image Classes
+Student: Chris Roe
+
+   Coding Style / UI / Documentation:  _2.5_ pts out of 5
+      - Operator spacing:  always put a space both sides of every binary operator
+        symbol
+      - Do not insert excessive / random blank lines
+      - Use consistent local variables.  Within the same function, don't use both
+        'i' and 'k' to indicate a column number.  Between functions, don't sometimes
+        use 'x' for columns and other times use 'y' for columns.  This all makes it
+        harder to read your code.
+      - Keep it DRY -- "don't repeat yourself".  One way to avoid repetition is to
+        use existing functions.  For example, operator!= for Pixel class should be
+        implemented as:
+             bool operator!= (const Pixel& pix1, const Pixel& pix2)
+             {
+                return !(pix1 == pix2);
+             }
+
+   Student testing code, Pixel_test.cpp:  _2.5_ pts out of 5
+      -Total asserts added:  18
+      (note: TW added 27, BW added 23)
+      -Testing sufficiency / correctness
+          - don't test invalid use cases!
+              p1.set(260,-2,300);  <<<< this use case is invalid (green < 0)
+              assert(p1.getRed()==255);
+              assert(p1.getGreen()==0);
+              assert(p1.getBlue()==255);
+          - no test for set(r, g, b) with valid input
+          - insufficient tests for == and != (you only tested true return values)
+              Not like this:
+                  void test_equality_inequality()
+                  {
+                     Pixel p3(200,100,40);
+                     Pixel p4(200,100,40);
+                     assert(p3==p4);
+                     Pixel p7(201,201,41);
+                     Pixel p6(207,222,47);
+                     assert(p7!=p6);
+                     // etc...
+
+              But like this:
+                  void test_equality_inequality()
+                  {
+                     Pixel p3(200,100,40);
+                     Pixel p4(200,100,40);
+                     assert(p3==p4);
+                     assert(!(p3!=p4);  <<<< test this too
+                     Pixel p7(201,201,41);
+                     Pixel p6(207,222,47);
+                     assert(p7!=p6);
+                     assert(!(p7==p6));  <<<< test this too
+                     // etc...
+
+   Student testing code, Image_test.cpp:  __4__ pts out of 5
+      *****SEGFAULT*****
+         This line is trying to set a pixel outside the bounds of
+         the image: img1.setPixel(22,43, pix1);
+         Note: img1 is only 10x15 pixels
+
+      -Total asserts added: 17
+       (note: TW added 25, BW added 26)
+
+      -Testing is just a bit incomplete, I'm guessing due to time.
+       Good job testing that the copy constructor did indeed create
+       an independent copy, btw.
+
+   Pixel.cpp implementation:  _10_ pts out of 10  -- GOOD!
+      Report from Pixel_mastertest.cpp:
+          Number of segmentation faults encountered during testing = 0
+          Number of infinite loops encountered during testing = 0
+          Number of tests passed = 16 out of 16
+          Number of tests failed = 0 out of 16
+          Percent of tests passed = 100%
+
+   Image.cpp implementation:  _10_ pts out of 25
+      - does not build as submitted
+          >>> I added a stub implementation for Image::setPixel(int, int, int, int, int) <<<
+
+      - mastertest report:
+          ### TEST FAILED ###: construct an image with non-default pixels
+          ### TEST FAILED ###: use setPixel with RGB values to change pixel colors in an image
+          ### TEST FAILED ###: use setPixel with RGB values to change pixel colors in an image
+          ### TEST FAILED ###: use setPixel with RGB values to change pixel colors in an image
+          ### TEST FAILED ###: make a copy of an image, check pixels
+          ### TEST FAILED ###: make a copy of an image, test copy independence
+          ### TEST FAILED ###: make an image assignment, check pixels
+          TEST PASSED: check that self-assignment was handled properly
+          Number of segmentation faults encountered during testing = 0
+          Number of infinite loops encountered during testing = 0
+          Number of tests passed = 15 out of 22
+          Number of tests failed = 7 out of 22
+          Percent of tests passed = 68.1818%
+
+   PART 2 TOTAL:  _29_ pts out of 50
+

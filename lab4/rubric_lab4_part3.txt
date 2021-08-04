@@ -1,0 +1,31 @@
+Lab 4 Part 3 - ImageStacker
+Student: Chris Roe
+
+   Style / UI / Program documentation: _4_ pts out of 10
+      - only wrote 1 helper; I expected 4 or 5.
+      - main function is 38 lines of code; I expected less than 20.
+      - You need to practice breaking down the problem into a set of helper functions
+         to be documented and implemented.  Then, if you implement and test each function,
+         the whole working program comes together much more smoothly.
+
+   Implementation image_stacker.cpp:  _5_ pts out of 15
+      Runtime Error -- Program Crashes:
+         wahl@Potter:~/cs223_win2017/cs223_grading_group/lab4/roe_chris$ g++ image_stacker.cpp ../0GRADER/Image.cpp ../0GRADER/Pixel.cpp
+         wahl@Potter:~/cs223_win2017/cs223_grading_group/lab4/roe_chris$ ./a.outEnter the directory of the images you want to use: cone_nebula
+         dir to get files of: /usr/local/share/images/images_noisy/cone_nebula
+         Enter a name for the product image: finalImage
+         terminate called after throwing an instance of 'std::bad_alloc'
+           what():  std::bad_alloc
+         Aborted
+
+      Diagnosis:
+         You're reading from the `files` stringstream using getline, but the filenames are
+         space-separated.  So, the entire stringstream is being funneled into file[0] and
+         the rest of the filenames are blank...
+               for (int i= 0; i<Num_Files;i++)
+               {
+                   getline(files, file[i]);  // PROBLEM #1
+               }
+
+   PART 3 TOTAL:    _9_ pts out of 25
+
