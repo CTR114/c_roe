@@ -1,0 +1,53 @@
+*** lab1output.pt1.txt ***
+name: Chris Roe
+Date: 1/10/17
+
+hello.cpp (p.27-28):
+
+Hello, world
+
+
+friends.cpp (Ch.2, Practice Prob. #2):
+
+My friends name is dave
+My friends name is Jarred
+My friends name is Dylan
+My friends name is Connor
+
+
+readnum.cpp (Ch. 3):
+
+Please enter a number: 22
+The number you entered was: 22/nroec20@Glinda:~/cs223/lab1$ 
+
+
+calculator.cpp (Ch. 3):
+
+Enter first argument/number:10
+Enter second argument.number10
+10*10=100
+10+10=20
+10/10=1
+10-10=0
+
+
+string_append.cpp (Ch. 3):
+
+please enter your first name: Chris
+please enter your last name: Roe
+Your name is:Chris Roe
+
+
+add.cpp (Ch. 3, Practice Prob. #2):
+
+Please enter the First number to add:3
+Please enter the second number to add: 4
+7
+
+
+divide.cpp (Ch. 3, Practice Prob. #3):
+
+Please enter the First number to add:7  
+Please enter the second number to add: 3.5
+2
+	 	  	 	  	   	    	  	      	 	

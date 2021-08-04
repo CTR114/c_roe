@@ -1,0 +1,84 @@
+// chris roe
+// 1/12/17
+*** lab1output.pt4.txt ***
+
+1. add_function.cpp (Ch. 6)
+
+the result is :3
+Adding 3 and 4 gives us 
+
+2. local_variable.cpp (Ch. 6)
+
+4
+
+3. global_variable.cpp (Ch. 6)
+
+function fun was called3times
+
+4. function_prototype.cpp (Ch. 6)
+
+The result is :3
+Adding 3 and 4 gives us:7r
+
+5. calc2.cpp (Ch. 6, Practice Prob. #2)
+   Show the output for five cases:  +, -, *, /, and an invalid operator.
+
+   what is the first number3
+what is the second number4
+what operation would you like to do?+
+ The answer is7
+
+what is the first number3
+what is the second number4
+what operation would you like to do?*
+ The answer is12
+
+what is the first number10
+what is the second number5
+what operation would you like to do?/
+ The answer is2
+
+what is the first number5
+what is the second number4
+what operation would you like to do?-
+ The answer is1
+
+what is the first number3
+what is the second number4
+what operation would you like to do?j
+Im sorry invalid operator
+
+6. password3.cpp (Ch. 6, Practice Prob. #4)
+   Show the output when a) the first try succeeds, b) the first try fails, but the
+   second succeeds, c) all tries fail.
+
+
+ enter your password, note you only have 4 tries 
+panthers
+access granted good job! 
+
+
+enter your password, note you only have 4 tries 
+man
+ password was incorrect 
+enter your password, note you only have 4 tries 
+man
+ password was incorrect 
+enter your password, note you only have 4 tries 
+man
+ password was incorrect 
+enter your password, note you only have 4 tries 
+man
+ password was incorrect 
+
+
+enter your password, note you only have 4 tries 
+man
+ password was incorrect 
+enter your password, note you only have 4 tries 
+panthers
+access granted good job! 
+
+
+
+	 	  	 	  	   	    	  	      	 	
